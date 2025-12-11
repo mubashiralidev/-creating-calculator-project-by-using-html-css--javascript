@@ -1,0 +1,86 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+/* Full Page Background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4f46e5, #9f7aea, #ec4899);
+    background-size: 300% 300%;
+    animation: bgMove 12s infinite alternate;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Calculator Box */
+.calculator {
+    width: 350px;
+    padding: 25px;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4), -5px -5px 20px rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Display */
+.display {
+    width: 100%;
+    height: 80px;
+    background: rgba(0,0,0,0.4);
+    color: #00ff95;
+    font-size: 38px;
+    padding: 20px;
+    text-align: right;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Button Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Buttons */
+button {
+    padding: 18px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-weight: 600;
+    transition: 0.2s;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3), -3px -3px 10px rgba(255,255,255,0.05);
+}
+
+button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 15px rgba(255,255,255,0.4), 0 0 25px rgba(255,255,255,0.2);
+}
+
+/* Operators */
+.operator { background: rgba(255, 166, 0, 0.35); }
+
+/* Clear */
+.clear { background: rgba(255, 50, 50, 0.35); }
+
+/* Delete */
+.del { background: rgba(255, 100, 100, 0.35); }
+
+/* Equal */
+.equal {
+    background: rgba(0, 255, 120, 0.35);
+    grid-column: span 2;
+}
